@@ -1,11 +1,11 @@
 ### Lights Out
 
-##Futtatás
+#Futtatás
 
-##A Játék Működése
+#A Játék Működése
 
-##Lehetséges megoldási módszerek
+#Lehetséges megoldási módszerek
 
-##A solver logikája
+#A solver logikája
 
-##Egy példa
+#Egy példa
