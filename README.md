@@ -28,7 +28,7 @@ Kezdetben valamennyi lámpa fel van kapcsolva, és a játék célja lekapcsolni 
 A játék táblázata tekinthető egy *n*x*n*-es (mod 2)-beli mátrixnak *((1 - ég; 0 - nem ég))*.  
 Továbbá, a megoldás is egy ugyanilyen mátrix *((1 - megnyomjuk; 0 - nem nyomjuk meg))*, mivel egy gombot kétszer megnyomva nem változik a táblázat.
 
-A solver a megoldáshoz a következő, Gauss-elimináció-szerű algoritmust alkalmazza:
+A solver a megoldáshoz a következő, Gauss-elimináció-szerű algoritmust alkalmazza:  
 Mivel a megnyomott gomb a fölötte lévő lámpának is megváltoztatja az állapotát, ezért le lehet vezetni a fényeket, hogy csak az alsó sorban legyenek, úgy, hogy mindig a legmagasabban lévő fény alatti mezőt nyomjuk meg addig, amíg a fények nem csak az alsó sorban vannak.  
 *Manuális kidolgoztuk, hogy ezután a lépés után melyik felső sorban lévő mezőket kell megnyomni, hogy az előző lépést megismételve az alsó sorban se égjenek fények.*  
 A solver az első lépés után csak beolvassa az alsó sort, összepárosítja a felső soros megoldásával, és lefuttatja mégegyszer az első lépést.  
