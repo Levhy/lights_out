@@ -43,7 +43,7 @@ A *Solver mode* gombra kattintva és a táblázat méretet kiválasztva saját i
 A *Play mode* gombra kattintva és a táblázat méretét kiválasztva egy tetszőleges megjelenik egy random generált szimmetrikus input.  
 A mezőkre kattintva lehet a (és a velük nem átlósan szomszédos) lámpák állapotát változtatni.  
 A *Solve* gombra kattintva a jelenlegi állapot megoldását (melyik gombokat kell megnyomni) meg lehet kapni.
-(Ha véletlen rossz gombot nyomsz meg, akkor a *Solve* gombot kétszer megnyomva megkaphatod megint a megoldást az új állapotnak)  
+(Ha véletlen rossz gombot nyomsz meg, akkor a *Solve* gombot kétszer megnyomva megkaphatod a megoldását az új állapotnak)  
 A *New* gombra kattintva pedig egy új inputot lehet kapni.
 ### Misc
 A *Back to main menu* gombbal a főmenübe lehet visszalépni, ahol újonnan lehet választani a 2 mód közt.  
