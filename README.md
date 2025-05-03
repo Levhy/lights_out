@@ -2,7 +2,7 @@
 
 Ez a *Lights out* nevezetű logikai játék rekreációja, beépített solver-rel.
 
-###Készítették:
+### Készítették:
 - Erdei Zsófia
 - Országh Júlia
 - Molnár Levente
