@@ -9,7 +9,7 @@ Ez a *Lights out* nevezetű logikai játék rekreációja, beépített solver-re
 
 ## Futtatás
 
-A lights_out.py fájl futtatásával indítható el a játék
+A lights_out.py fájl futtatásával indítható el a játék.
 
 ### Futtatási előfeltételek:
 
