@@ -19,7 +19,7 @@ A lights_out.py fájl futtatásával indítható el a játék.
 
 ## A Játék Működése
 
-A játék egy *n*x*n*-es (tradícionálisan *5*x*5*-ös) táblázatból áll, ahol minden mező egy lámpa.
+A játék egy *n*x*n*-es (tradícionálisan *5*x*5*-ös) táblázatból áll, ahol minden mező egy lámpa.  
 Egy lámpa lehet fel- vagy lekapcsolt állapotban és egyre rányomva az és a vele (nem átlósan) szomszédos lámpák állapotot váltanak.
 Kezdetben valamennyi lámpa fel van kapcsolva, és a játék célja lekapcsolni az összeset.
 
