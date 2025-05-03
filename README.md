@@ -41,7 +41,7 @@ A játékot futtatva 2 lehetőség van:
 A *Solver mode* gombra kattintva és a táblázat méretet kiválasztva saját inputot lehet választani, amire a megoldást a *Solve* gombbal lehet megtekinteni.
 ### Play mode
 A *Play mode* gombra kattintva és a táblázat méretét kiválasztva egy tetszőleges megjelenik egy random generált szimmetrikus input.  
-A mezőkre kattintva lehet a (és a velük nem átlósan szomszédos) lámpák állapotát változtatni.  
+A mezőkre kattintva lehet azoknak (és a velük nem átlósan szomszédos) lámpáknak az állapotát változtatni.  
 A *Solve* gombra kattintva a jelenlegi állapot megoldását (melyik gombokat kell megnyomni) meg lehet kapni.
 (Ha véletlen rossz gombot nyomsz meg, akkor a *Solve* gombot kétszer megnyomva megkaphatod a megoldását az új állapotnak)  
 A *New* gombra kattintva pedig egy új inputot lehet kapni.
