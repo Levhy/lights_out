@@ -122,6 +122,33 @@ def ButtonState(matrix, pos, size, mode, n):
                 if k+1 <= n-1:
                     matrix[i+n]=(matrix[i+n]+1)%2
 
+def ButtonState_2(matrix, pos, size,n, solver, dictionary):
+    for i in range(len(pos)):
+            if  pos[i][0]<= mouse[0] <= pos[i][0]+size and pos[i][1] <= mouse[1] <= pos[i][1]+size:    #tehát ha pos-ban az i. mezőre kattintunk
+                #saját magát változtatja:
+                matrix[i]=(matrix[i]+1)%2
+                
+                k = (i // n)
+                j = (i % n)
+                #szomszédos mezőket változtatja:
+                if 0 <= j-1:
+                    matrix[i-1]=(matrix[i-1]+1)%2
+                if j+1 <= n-1:
+                    matrix[i+1]=(matrix[i+1]+1)%2
+                if 0 <= k-1 :
+                    matrix[i-n]=(matrix[i-n]+1)%2
+                if k+1 <= n-1:
+                    matrix[i+n]=(matrix[i+n]+1)%2
+                    
+                empty=False
+                current=[]
+                for i in range(n**2):
+                    current.append(matrix[i])
+                solver1, ending= toggleDown(n, current)
+                solver2=dictionary.get(ending)
+                for i in range(n**2):
+                    solver[i]=(solver1[i]+solver2[i])%2
+
 
                 
 
@@ -460,6 +487,7 @@ while run==True:
                     ButtonVisuals(color_white,color_black, color_dark,440,600,200,80,"Clear",500,614,color_white, small)
                     if 440<= mouse[0] <=640 and 600<= mouse[1] <= 680:
                         empty=True
+                        screen.fill(color_black)
                         matrix_3=[0 for i in range(9)]
                         solver3=[0 for i in range(9)]
 
@@ -490,6 +518,7 @@ while run==True:
                     ButtonVisuals(color_white,color_black, color_dark,440,600,200,80,"Clear",500,614,color_white, small)
                     if 440<= mouse[0] <=640 and 600<= mouse[1] <= 680:
                         empty=True
+                        screen.fill(color_black)
                         matrix_5=[0 for i in range(25)]
                         solver3=[0 for i in range(25)]
                         
@@ -518,7 +547,10 @@ while run==True:
                     
             if play_screen_3.CurrentState==True:
                 #gombok működése a játék módban:
-                ButtonState(matrix_3, pos_3, 100, 2, 3)
+                if solve_counter%2==0:
+                    ButtonState(matrix_3, pos_3, 100, 2, 3)
+                else:
+                    ButtonState_2(matrix_3, pos_3, 100,3, solver3, dict_3)
                 if 80 <= mouse[0] <= 360 and 600 <= mouse[1] <= 680: 
                     play_screen_3.endCurrentScreen()
                     main_screen_modes.makeCurrentScreen()
@@ -550,7 +582,10 @@ while run==True:
             
             #Mint a megoldó módban plusz ugyanazokkal a módosításokkal, amik a 3x3-as méretben voltak
             if play_screen_5.CurrentState == True:
-                ButtonState(matrix_5, pos_5, 60, 2, 5)
+                if solve_counter%2==0:
+                    ButtonState(matrix_5, pos_5, 60, 2, 5)
+                else:
+                    ButtonState_2(matrix_5, pos_5, 60,5, solver3, dict_5)
                 if 80 <= mouse[0] <= 360 and 600 <= mouse[1] <= 680: 
                     play_screen_5.endCurrentScreen()
                     main_screen_modes.makeCurrentScreen()
@@ -580,7 +615,10 @@ while run==True:
                     
             #Mint a megoldó módban plusz ugyanazokkal a módosításokkal, amik a 3x3-as méretben voltak
             if play_screen_6.CurrentState == True:
-                ButtonState(matrix_6, pos_6, 50, 2, 6)
+                if solve_counter%2==0:
+                    ButtonState(matrix_6, pos_6, 50, 2, 6)
+                else:
+                    ButtonState_2(matrix_6, pos_6, 50,6, solver3, dict_6)
                 if 80 <= mouse[0] <= 360 and 600 <= mouse[1] <= 680: 
                     play_screen_6.endCurrentScreen()
                     main_screen_modes.makeCurrentScreen()
