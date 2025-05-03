@@ -45,7 +45,7 @@ A mezőkre kattintva lehet a (és a velük nem átlósan szomszédos) lámpák �
 A *Solve* gombra kattintva a jelenlegi állapot megoldását (melyik gombokat kell megnyomni) meg lehet kapni.
 (Ha véletlen rossz gombot nyomsz meg, akkor a *Solve* gombot kétszer megnyomva megkaphatod a megoldását az új állapotnak)  
 A *New* gombra kattintva pedig egy új inputot lehet kapni.
-### Misc
+#### Misc
 A *Back to main menu* gombbal a főmenübe lehet visszalépni, ahol újonnan lehet választani a 2 mód közt.  
 A *Quit* gombbal lehet bezárni a programot.
 
