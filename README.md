@@ -35,7 +35,17 @@ A solver az első lépés után csak beolvassa az alsó sort, összepárosítja 
 Az algoritmus során a solver végig tárolja, hogy hányszor lett megnyomva egy gomb, és a végén ezeket elosztja 2-vel maradékosan, ezzel megkapva a megoldási mátrixot.  
 
 ## Hogy kell játszani?
-### 3x3
-### 5x5
-### 6x6
- 
+
+A játékot futtatva 2 lehetőség van:
+### Solver mode
+A *Solver mode* gombra kattintva és a táblázat méretet kiválasztva saját inputot lehet választani, amire a megoldást a *Solve* gombbal lehet megtekinteni.
+### Play mode
+A *Play mode* gombra kattintva és a táblázat méretét kiválasztva egy tetszőleges megjelenik egy random generált szimmetrikus input.  
+A mezőkre kattintva lehet a (és a velük nem átlósan szomszédos) lámpák állapotát változtatni.  
+A *Solve* gombra kattintva a jelenlegi állapot megoldását (melyik gombokat kell megnyomni) meg lehet kapni.
+(Ha véletlen rossz gombot nyomsz meg, akkor a *Solve* gombot kétszer megnyomva megkaphatod megint a megoldást az új állapotnak)  
+A *New* gombra kattintva pedig egy új inputot lehet kapni.
+### Misc
+A *Back to main menu* gombbal a főmenübe lehet visszalépni, ahol újonnan lehet választani a 2 mód közt.  
+A *Quit* gombbal lehet bezárni a programot.
+
