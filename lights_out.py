@@ -41,7 +41,7 @@ class Screen():
     #    return self.screen
 
 #Ezzel a 9 képernyővel fogunk dolgozni (változó neve hogy hogyan hivatkozunk rá mi, és zárójelben az szerepel hogy a képernyő tetején mi lesz kiírva)
-main_screen_modes = Screen("Lights out modes")
+main_screen_modes = Screen("Lights out")
 solver_mode = Screen("Lights out")
 game_screen_3 = Screen("3x3")
 game_screen_5 = Screen("5x5")
