@@ -21,7 +21,7 @@ A lights_out.py fájl futtatásával indítható el a játék.
 
 A játék egy *n*x*n*-es (tradícionálisan *5*x*5*-ös) táblázatból áll, ahol minden mező egy lámpa.  
 Egy lámpa lehet fel- vagy lekapcsolt állapotban és egyre rányomva az és a vele (nem átlósan) szomszédos lámpák állapotot váltanak.
-Kezdetben valamennyi lámpa fel van kapcsolva, és a játék célja lekapcsolni az összeset.
+Kezdetben valamennyi lámpa fel van kapcsolva, és a játék célja lekapcsolni az összeset.  
 Bizonyítottan nem minden kezdőpozíció megoldható.
 
 ## A megoldás logikája
@@ -33,7 +33,7 @@ A solver a megoldáshoz a következő, Gauss-elimináció-szerű algoritmust alk
 Mivel a megnyomott gomb a fölötte lévő lámpának is megváltoztatja az állapotát, ezért le lehet vezetni a fényeket, hogy csak az alsó sorban legyenek, úgy, hogy mindig a legmagasabban lévő fény alatti mezőt nyomjuk meg addig, amíg a fények nem csak az alsó sorban vannak.  
 *Manuális kidolgoztuk, hogy ezután a lépés után melyik felső sorban lévő mezőket kell megnyomni, hogy az előző lépést megismételve az alsó sorban se égjenek fények.*  
 A solver az első lépés után csak beolvassa az alsó sort, összepárosítja a felső soros megoldásával, és lefuttatja mégegyszer az első lépést.  
-Az algoritmus során a solver végig tárolja, hogy hányszor lett megnyomva egy gomb, és a végén ezeket elosztja 2-vel maradékosan, ezzel megkapva a megoldási mátrixot.
+Az algoritmus során a solver végig tárolja, hogy hányszor lett megnyomva egy gomb, és a végén ezeket elosztja 2-vel maradékosan, ezzel megkapva a megoldási mátrixot.  
 Ha olyan alsó sort talál, melynek nincs felső soros párja, akkor a megoldás nem létezik, és ezt adja vissza a solver.  
 
 ## Hogy kell játszani?
