@@ -54,7 +54,7 @@ A *Quit* gombbal lehet bezárni a programot.
 
 ## Példák
 
-### Solver mode
+### [Solver mode](https://github.com/Levhy/lights_out/blob/main/lights_out_pl_solver.gif)
 
-### Play mode
+### [Play mode](https://github.com/Levhy/lights_out/blob/main/lights_out_pl_play.gif)
 
