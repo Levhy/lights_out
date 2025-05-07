@@ -40,7 +40,8 @@ Ha olyan alsó sort talál, melynek nincs felső soros párja, akkor a megoldás
 
 A játékot futtatva 2 lehetőség van:
 ### Solver mode
-A *Solver mode* gombra kattintva és a táblázat méretet kiválasztva saját inputot lehet választani, amire a megoldást a *Solve* gombbal lehet megtekinteni: a pirossal kijelölt mezőkre nyomással lehetne megnyerni a játékot. Ha egy választott inputnak nincs megoldása, akkor a program a *Not Solvable* szöveget jeleníti meg. 
+A *Solver mode* gombra kattintva és a táblázat méretet kiválasztva saját inputot lehet választani, amire a megoldást a *Solve* gombbal lehet megtekinteni: a pirossal kijelölt mezőkre nyomással lehetne megnyerni a játékot.  
+Ha egy választott inputnak nincs megoldása, akkor a program a *Not Solvable* szöveget jeleníti meg.   
 A *Clear* gombbal törölni lehet ez eddigi inputot, és alapállapotba helyezni a táblázatot.
 ### Play mode
 A *Play mode* gombra kattintva és a táblázat méretét kiválasztva egy tetszőleges megjelenik egy random generált középpontosan szimmetrikus input, ezek mindig megoldhatóak.  
