@@ -28,12 +28,13 @@ Bizonyítottan nem minden kezdőpozíció megoldható *5*x*5*-ös esetben, de *3
 A játék táblázata tekinthető egy *n*x*n*-es (mod 2)-beli mátrixnak *((1 - ég; 0 - nem ég))*.  
 Továbbá, a megoldás is, ha létezik, egy ugyanilyen mátrix *((1 - megnyomjuk; 0 - nem nyomjuk meg))*, mivel egy gombot páros sokszor megnyomva nem változik a táblázat.
 
-A solver a megoldáshoz a következő, light chasing nevű módszert használja:  
-Mivel a megnyomott gomb a fölötte lévő lámpának is megváltoztatja az állapotát, ezért le lehet vezetni a fényeket úgy, hogy csak az alsó sorban legyenek égő lámpák.Ezt úgy tudjuk megtenni, hogy mindig a legmagasabban lévő fény alatti mezőt nyomjuk meg addig, amíg a fények már csak az alsó sorban világítanak. Matematikai módszerekkel bizonyítható, hogy minden olyan feladványnak, ami megoldható létezik olyan megoldása, hogy az így kapott alsó sor alapján a felső sorban megnyomunk egy bizonyos gombkombinációt, és megint lejuttatjuk a fényeket az alsó sorba.
+A solver a megoldáshoz a következő, **light chasing** nevű módszert használja:  
+Mivel a megnyomott gomb a fölötte lévő lámpának is megváltoztatja az állapotát, ezért le lehet vezetni a fényeket úgy, hogy csak az alsó sorban legyenek égő lámpák. Ezt úgy tudjuk megtenni, hogy mindig a legmagasabban lévő fény alatti mezőt nyomjuk meg addig, amíg a fények már csak az alsó sorban világítanak. Matematikai módszerekkel bizonyítható, hogy minden olyan feladványnak, ami megoldható létezik olyan megoldása, hogy az így kapott alsó sor alapján a felső sorban megnyomunk egy bizonyos gombkombinációt, és megint lejuttatjuk a fényeket az alsó sorba.
 *Manuálisan kidolgoztuk, hogy melyik alsó sorban kiolvasható lámpasorozathoz melyik felsősorbeli gombnyomásokat kell párosítani*  
 A solver működése mindig egy szótáron alapul, amiben tároljuk ezeket a párokat (egészen konkrétan annak a gombonyomássorozatnak a mátrixát tároljuk, hogy ha tudjuk mi van az alsó sorban, akkor milyen gombnyomásokra van szükség ahhoz, hogy a felső sorban jó gombok legyenek megnyomva ÉS hogy a világító lámpákat megint lejuttassuk az alsó sorba).
 A solver lemásolja azt a mátrixot ami a képernyőn szereplő állást tárolja (0-1 mátrix a fent leírtaknak megfelelően), lejuttatja a fényeket ezen az alsó sorba, közben rögzíti egy másik mátrixban, hogy ehhez melyik gombokat kellene megnyomnia. Utána csak beolvassa az alsó sort, és kikeresi ennek a szótárban tárolt megoldását.  
-Végül veszi azt a két mátrixot, amiben a gombnyomásokat tároltuk, veszi ezek mod 2 összegét, és ezt adja vissza a felhasználónak.
+Végül veszi azt a két mátrixot, amiben a gombnyomásokat tároltuk, veszi ezek mod 2 összegét, és ezt adja vissza a felhasználónak.  
+Ha a legalsó sor nincs benne a szótárban, akkor a feladvány nem lesz megoldható. Ennek a bizonyítása a következő hivatkozásban található: https://dc.ewu.edu/cgi/viewcontent.cgi?article=1166&context=theses
 
 ## Hogy kell játszani?
 
