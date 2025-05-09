@@ -388,16 +388,19 @@ while run==True:
 
     for ev in pygame.event.get():
         if ev.type==pygame.QUIT:
+            run=False
             pygame.quit()
             break
         if ev.type==pygame.MOUSEBUTTONDOWN:
             if main_screen_modes.CurrentState!=True:
                 if 330 <= mouse[0] <= 480 and 360 <= mouse[1] <= 420:
+                    run=False
                     pygame.quit()
                     break
-                    #Ez a kilépés gomb működését intézi, képernyőfüggetlen az egyszerűség kedvéért
+                    #Ez a kilépés gomb működését intézi
             else:
                 if 322 <= mouse[0] <= 472 and 360 <= mouse[1] <= 405:
+                    run=False
                     pygame.quit()
                     break
 
@@ -655,6 +658,9 @@ while run==True:
                     #random_new_game(6)
                     symm_new_game(6)
 
+    if run==False:
+        break
+
 
 
     if main_screen_modes.CurrentState == True:
@@ -877,6 +883,8 @@ while run==True:
 
 
     pygame.display.update()
+
+pygame.quit()
 
 
 
